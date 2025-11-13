@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-03T17:56:28 IST" name="Default suite" finished-at="2025-11-03T17:56:46 IST" duration-ms="17919">
+  <suite started-at="2025-11-13T08:03:24 IST" name="Default suite" finished-at="2025-11-13T08:03:24 IST" duration-ms="145">
     <groups>
     </groups>
-    <test started-at="2025-11-03T17:56:28 IST" name="Default test" finished-at="2025-11-03T17:56:46 IST" duration-ms="17919">
-      <class name="Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter2_CrossBrowserTesting">
-        <test-method signature="openChrome()[pri:0, instance:Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter2_CrossBrowserTesting@5bf0d49]" started-at="2025-11-03T17:56:28 IST" name="openChrome" finished-at="2025-11-03T17:56:33 IST" duration-ms="4472" status="PASS">
+    <test started-at="2025-11-13T08:03:24 IST" name="Default test" finished-at="2025-11-13T08:03:24 IST" duration-ms="145">
+      <class name="Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter5_Assertions">
+        <test-method signature="softAssertion()[pri:0, instance:Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter5_Assertions@411f53a0]" started-at="2025-11-13T08:03:24 IST" name="softAssertion" finished-at="2025-11-13T08:03:24 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openChrome -->
-        <test-method signature="openEdge()[pri:0, instance:Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter2_CrossBrowserTesting@5bf0d49]" started-at="2025-11-03T17:56:33 IST" name="openEdge" finished-at="2025-11-03T17:56:36 IST" duration-ms="2751" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openEdge -->
-        <test-method signature="openFirefox()[pri:0, instance:Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter2_CrossBrowserTesting@5bf0d49]" started-at="2025-11-03T17:56:36 IST" name="openFirefox" finished-at="2025-11-03T17:56:46 IST" duration-ms="10617" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openFirefox -->
-      </class> <!-- Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter2_CrossBrowserTesting -->
+        </test-method> <!-- softAssertion -->
+      </class> <!-- Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter5_Assertions -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

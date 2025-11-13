@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Users\Kamalnath\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412" version="21.0.8">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Program Files\Eclipse Adoptium\jdk-25.0.0.36-hotspot" version="25"/>
+    <libraryInfo home="C:\Program Files\Java\jdk-16.0.2" version="16.0.2"/>
+    <libraryInfo home="C:\Program Files\Eclipse Adoptium\jdk-21.0.6.7-hotspot" version="21.0.6"/>
+    <libraryInfo home="C:\Program Files\Java\jdk-17.0.4.1" version="17.0.4.1"/>
+    <libraryInfo home="C:\Users\Kamalnath\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre" version="21.0.8"/>
+</libraryInfos>

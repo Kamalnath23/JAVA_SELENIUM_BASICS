@@ -1,0 +1,9 @@
+package Kamal.JavaSeleniumBasics.SeleniumWebDrivers;
+
+import org.testng.annotations.Test;
+
+public class Chapter0_TestBasics {
+  @Test
+  public void f() {
+  }
+}

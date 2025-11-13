@@ -1,0 +1,16 @@
+package Kamal.JavaSeleniumBasics.SeleniumWebDrivers;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
+
+public class Chapter4_DataProvider {
+  @Test(dataProvider = "dp")
+  public void f(Integer n, String s) {
+  }
+
+  @DataProvider
+  public Object[][] testData() {
+    Object[][] loginData = {{"Kamal", "Kamal@123"}, {"Admin", "Admin@123"}, {"User", "User@123"}, {"Keerthi", "Keerthi@123"}};
+    return loginData;
+  }
+}

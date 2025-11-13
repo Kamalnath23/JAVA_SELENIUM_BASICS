@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter1_LaunchChromeBrowser">
+      <class name="Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter4_DataProvider">
         <methods>
-          <include name="openBrowser"/>
+          <include name="UserLogin"/>
         </methods>
-      </class> <!-- Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter1_LaunchChromeBrowser -->
+      </class> <!-- Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter4_DataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

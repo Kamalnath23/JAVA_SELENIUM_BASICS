@@ -1,0 +1,16 @@
+package Kamal.JavaSeleniumBasics.SeleniumWebDrivers;
+
+import org.testng.annotations.Test;
+
+public class Chapter5_Assertions {
+  @Test
+  public void softAssertion() {
+	  System.out.println("This is a soft assertion test");
+	  String expectedTitle = "Google";
+	  String actualTitle = "Google";
+	  String expectedTitle2 = "Bing";
+	  String actualTitle2 = "Bing";
+	  
+	  
+  }
+}

@@ -1,0 +1,20 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
+
+public class Chapter4_DataProvider {
+  @Test(dataProvider = "testData")
+  public void UserLogin(String userName, String Password) {
+	System.out.println(" |UserName: " + userName + "|\t Password: " + Password+"|");
+  }
+
+  @DataProvider
+  public Object[][] testData() {
+    Object[][] loginData = {{"Kamal", "Kamal@123"}, 
+    		{"Admin", "Admin@123"}, 
+    		{"User", "User@123"}, 
+    		{"Keerthi", "Keerthi@123"}};
+    return loginData;
+  }
+}
