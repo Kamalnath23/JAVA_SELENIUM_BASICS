@@ -40,5 +40,10 @@ public class Chapter5_Assertions {
   //and reporting them at the end when assertAll() is called. Hard Assertions immediately halt
   //test execution upon a failure, throwing an AssertionError.
   
+  //what if assertAll() is not called in Soft Assertions?
+  //If assertAll() is not called, any failures in the soft assertions will not be
+  //reported, and the test may incorrectly appear to have passed.
+  
+  
   
 }
