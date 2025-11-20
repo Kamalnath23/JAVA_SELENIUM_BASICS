@@ -1,9 +1,0 @@
-package Kamal.JavaSeleniumBasics.SeleniumWebDrivers;
-
-import org.testng.annotations.Test;
-
-public class Chapter5_Assertions {
-  @Test
-  public void f() {
-  }
-}
