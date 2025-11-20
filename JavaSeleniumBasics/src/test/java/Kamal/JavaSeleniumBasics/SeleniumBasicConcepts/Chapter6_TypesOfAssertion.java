@@ -43,6 +43,27 @@ public class Chapter6_TypesOfAssertion {
 	  //Collate all assertions and report any failures
 	  softAssert.assertAll();
 	  
+	  //7. Assert same(object1, object2, message) - Verifies that two references point
+	  //   to the same object. If they do not, it records a failure with the
+	  //   provided message.
+	  Object obj1 = nonNullTitleObject;
+	  Object obj2 = nonNullTitleObject;
+	  softAssert.assertSame(obj1, obj2, "Objects do not reference the same instance"
+	  		+ "");
+	  //8. Assert notSame(object1, object2, message) - Verifies that two references
+	  //   do not point to the same object. If they do, it records a failure
+	  //   with the provided message.
+	  Object obj3 = new Object();
+	  softAssert.assertNotSame(obj1, obj3, "Objects reference the same instance");
+	  softAssert.assertAll();
+	  
+	  //Assert Fail
+	  //9. fail(message) - Immediately records a failure with the provided message.
+	  //   This is useful for marking a test as failed under certain conditions.
+	  //   Note: This method does not take a condition; it simply fails the test.
+	  //   Uncomment the line below to see it in action.
+	  //softAssert.fail("This is a forced failure for demonstration purposes.");
+	  
 	  
   }
 }

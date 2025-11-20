@@ -1,0 +1,9 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+
+public class Chapter6_TypesOfAssertion {
+  @Test
+  public void f() {
+  }
+}

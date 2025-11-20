@@ -1,0 +1,30 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class Chapter6_TypesOfAssertion {
+  @Test
+  public void TypesOfSoftAssertion() {
+	  SoftAssert softAssert = new SoftAssert();
+	  //Types of Soft Assertions in TestNG
+	  //1. assertEquals(actual, expected, message) - Verifies that two values are
+	  //   equal. If not, it records a failure with the provided message.
+	  String expectedTitle = "Google";
+	  String actualTitle = "Google";
+	  softAssert.assertEquals(actualTitle, expectedTitle, "Title does not match for Google");
+	  
+	  //2. assertNotEquals(actual, expected, message) - Verifies that two values
+	  //   are not equal. If they are equal, it records a failure with the provided
+	  //   message.
+	  String unexpectedTitle = "Bing";
+	  softAssert.assertNotEquals(actualTitle, unexpectedTitle, "Title should not match Bing");
+	  
+	  //3. assertTrue(condition, message) - Verifies that a condition is true.
+	  //   If the condition is false, it records a failure with the provided message.
+	  boolean isTitleDisplayed = true; // Example condition
+	  softAssert.assertTrue(isTitleDisplayed, "Title is not displayed as expected");
+	  
+	  
+  }
+}

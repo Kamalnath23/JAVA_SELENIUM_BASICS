@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="BasicTestSuite">
+  <test thread-count="2" parallel="tests" name="BasicTest">
+    <classes>
+      <class name="testNG_Suite.Class2">
+       	<methods>
+       		<exclude name="testCase2"/>
+       		<include name="testCase1"/>
+       		<include name="testCase3"/>
+       	</methods>
+      </class>
+      <class name="testNG_Suite.Class1"/>
+    </classes>
+  </test> <!-- BasicTest -->
+</suite> <!-- BasicTestSuite -->
