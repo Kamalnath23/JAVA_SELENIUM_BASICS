@@ -5,7 +5,7 @@
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="JavaSeleniumBasics"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
     <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS">
-        <mapEntry key="Kamal.JavaSeleniumBasics.SeleniumBasicConcepts.Chapter3_AllAnotations" value="afterMethod;beforeTest;test1;beforeMethod;afterClass;beforeSuite;afterTest;test3;test5;beforeClass;test2;afterSuite;test4"/>
+        <mapEntry key="Kamal.JavaSeleniumBasics.SeleniumBasicConcepts.Chapter3_AllAnotations" value="test2;test4;beforeClass;afterTest;beforeSuite;afterMethod;test1;beforeTest;test3;afterClass;test5;beforeMethod;afterSuite"/>
     </mapAttribute>
     <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
         <listEntry value="Kamal.JavaSeleniumBasics.SeleniumBasicConcepts.Chapter3_AllAnotations"/>

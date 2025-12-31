@@ -1,0 +1,32 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
+
+public class UI_Testing {
+	WebDriver driver;
+
+	@BeforeTest
+	public void beforeTest() {
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
+		driver.manage().window().maximize(); // Maximize the browser window
+		driver.get("https://www.letskodeit.com/practice"); // Open Bing website
+	}
+
+	@Test
+	public void testRadoButton() {
+		
+	}
+
+	@AfterTest
+	public void afterTest() {
+	}
+
+}

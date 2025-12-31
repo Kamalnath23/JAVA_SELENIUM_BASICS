@@ -1,0 +1,8 @@
+# Metadata files
+metadata.json
+*.metadata
+
+#logs
+*.log
+
+#OS files

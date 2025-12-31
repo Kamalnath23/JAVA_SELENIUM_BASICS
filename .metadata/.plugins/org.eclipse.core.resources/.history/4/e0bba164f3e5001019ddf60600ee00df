@@ -1,0 +1,102 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import org.testng.annotations.BeforeTest;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
+
+public class Chapter7_UI_Testing {
+	WebDriver driver;
+
+	@BeforeTest
+	public void beforeTest() {
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
+		driver.manage().window().maximize(); // Maximize the browser window
+		driver.get("https://www.letskodeit.com/practice"); // Open Bing website
+		//Implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+
+	@Test(priority=0)
+	public void testRadoButton() {
+		System.out.println("Title of the page: " + driver.getTitle()); // Print the
+		WebElement rdoBMW = driver.findElement(By.xpath("//input[@id='bmwradio' and @value='bmw']"));
+		rdoBMW.click();
+		// Verify if the radio button is selected
+		//https://w3c.github.io/webdriver/webdriver-spec.html#is-element-selected
+		if (rdoBMW.isSelected()) {
+			System.out.println("BMW radio button is selected.");
+		} else {
+			System.out.println("BMW radio button is NOT selected.");
+		}
+	}
+	
+	@Test(priority=1)
+	public void testCheckBox() {
+		WebElement chkHonda = driver.findElement(By.id("hondacheck"));
+		chkHonda.click();
+		// Verify if the checkbox is selected
+		if (chkHonda.isSelected()) {
+			System.out.println("Honda checkbox is selected.");
+		} else {
+			System.out.println("Honda checkbox is NOT selected.");
+		}
+		
+		WebElement chkBenz = driver.findElement(By.id("benzcheck"));
+		chkBenz.click();
+		// Verify if the checkbox is selected
+		if (chkBenz.isSelected()) {
+			System.out.println("Benz checkbox is selected.");
+		} else {
+			System.out.println("Benz checkbox is NOT selected.");
+		}
+		
+		WebElement chkBMW = driver.findElement(By.id("bmwcheck"));
+		chkBMW.click();
+	}
+	
+	@Test(priority=2)
+	public void testSingleTextDropdown() {
+		WebElement dropdown = driver.findElement(By.id("carselect"));
+		dropdown.click();
+		WebElement optionHonda = driver.findElement(By.xpath("//option[@value='honda']"));
+		optionHonda.click();
+		// Verify if the BMW option is selected
+		if (optionHonda.isSelected()) {
+			System.out.println("honda option is selected in the dropdown.");
+		} else {
+			System.out.println("honda option is NOT selected in the dropdown.");
+		}	
+	}
+	
+	@Test(priority=3)
+	public void testMultipleSelectDropdown() {
+		WebElement multiSelect = driver.findElement(By.id("multiple-select-example"));
+		multiSelect.click();
+		WebElement optionApple = driver.findElement(By.xpath("//option[@value='apple']"));
+		optionApple.click();
+		WebElement optionOrange = driver.findElement(By.xpath("//option[@value='orange']"));
+		optionOrange.click();
+		// Verify if the Apple option is selected
+		if (optionApple.isSelected()) {
+			System.out.println("Apple option is selected in the multi-select dropdown.");
+		} else {
+			System.out.println("Apple option is NOT selected in the multi-select dropdown.");
+		}	
+	}
+
+	@AfterTest
+	public void afterTest() {
+	}
+
+}

@@ -1,0 +1,27 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
+
+public class UI_Testing {
+	WebDriver driver;
+  @Test
+  public void f() {
+  }
+  @BeforeTest
+  public void beforeTest() {
+	  WebDriverManager.edgedriver().setup();
+	  driver = new EdgeDriver();
+  }
+
+  @AfterTest
+  public void afterTest() {
+  }
+
+}
