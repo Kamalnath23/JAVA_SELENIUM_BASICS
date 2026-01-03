@@ -1,0 +1,18 @@
+package Kamal.JavaSeleniumBasics.PageFactory.Pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPagePF {
+	WebDriver driver;
+	//constructor
+	public LoginPagePF(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	//WebElements and methods will be added here
+	@FindBy(id="user_name");
+	WebElement usernameField;
+	
+}

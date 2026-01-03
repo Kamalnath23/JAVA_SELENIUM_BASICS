@@ -1,0 +1,88 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeTest;
+
+public class Chapter12_SwitchToWindow {
+	WebDriver driver;
+
+	@BeforeTest
+	public void beforeTest() {
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
+		driver.manage().window().maximize(); // Maximize the browser window
+		driver.get("https://www.letskodeit.com/practice"); // Open Bing website
+		// Implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+
+	@Test
+	public void windowHandle() {
+		//get the current window handle
+		String mainWindowHandle = driver.getWindowHandle();
+		System.out.println("Main Window Handle: " + mainWindowHandle);
+		
+		//click on the button which opens a new window
+		driver.findElement(By.id("openwindow")).click();
+		System.out.println("Clicked on 'Open Window' button.");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//get all window handles
+		Set<String> windowHandles = driver.getWindowHandles();
+		System.out.println("All Window Handles: " + windowHandles);
+		System.out.println("Total number of windows: " + windowHandles.size());
+		//switch to the new window
+		for (String handle : windowHandles) {
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				System.out.println("Switched to new window with handle: " + handle);
+				System.out.println("Title of the new window: " + driver.getTitle());
+				//Close the new window
+				driver.close();
+				System.out.println("Closed the new window.");
+				//Switch back to the main window
+				driver.switchTo().window(mainWindowHandle);
+				System.out.println("Switched back to main window.");
+				System.out.println("Title of the main window: " + driver.getTitle());
+			}
+		}
+		
+		//Switch using while loop
+		//click on the button which opens a new window
+		driver.findElement(By.id("openwindow")).click();
+		System.out.println("Clicked on 'Open Window' button again.");
+		//get all window handles
+		windowHandles = driver.getWindowHandles();
+		System.out.println("All Window Handles: " + windowHandles);
+		System.out.println("Total number of windows: " + windowHandles.size());
+		
+		Iterator<String> iterator = windowHandles.iterator();
+		while (iterator.hasNext()) {
+			String handle = iterator.next();
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				System.out.println("Switched to new window with handle: " + handle);
+				System.out.println("Title of the new window: " + driver.getTitle());
+				//Close the new window
+				driver.close();
+				System.out.println("Closed the new window.");
+				//Switch back to the main window
+				driver.switchTo().window(mainWindowHandle);
+				System.out.println("Switched back to main window.");
+				System.out.println("Title of the main window: " + driver.getTitle());
+			}
+		}
+		
+	}
+
+}

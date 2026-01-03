@@ -1,0 +1,9 @@
+package Kamal.JavaSeleniumBasics.PageFactory.Pages;
+
+import org.testng.annotations.Test;
+
+public class LoginPagePF {
+  @Test
+  public void f() {
+  }
+}

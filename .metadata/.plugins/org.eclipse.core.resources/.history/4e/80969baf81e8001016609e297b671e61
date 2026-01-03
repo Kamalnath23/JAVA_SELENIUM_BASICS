@@ -1,0 +1,13 @@
+package Kamal.JavaSeleniumBasics.SeleniumBasicConcepts;
+
+import org.testng.annotations.Test;
+
+public class Chapter8_MouseActions {
+
+	Webdriver driver;
+	
+	
+  @Test
+  public void f() {
+  }
+}

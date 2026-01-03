@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter4_DataProvider">
+      <class name="Kamal.JavaSeleniumBasics.PageFactory.LoginTest">
         <methods>
-          <include name="UserLogin"/>
+          <include name="ValidateLoginTestWithPageFactory"/>
         </methods>
-      </class> <!-- Kamal.JavaSeleniumBasics.SeleniumWebDrivers.Chapter4_DataProvider -->
+      </class> <!-- Kamal.JavaSeleniumBasics.PageFactory.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

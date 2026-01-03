@@ -1,0 +1,24 @@
+package Kamal.JavaSeleniumBasics.PageFactory;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import Kamal.JavaSeleniumBasics.PageFactory.Pages.LoginPagePF;
+import Kamal.JavaSeleniumBasics.PageFactory.Utility.Utility;
+
+public class LoginTest {
+	WebDriver driver;
+  @Test
+  public void ValidateLoginTestWithPageFactory() {
+	  driver = Utility.openBrowser("edge", "https://practicetestautomation.com/practice-test-login/");
+	  LoginPagePF loginPage = new LoginPagePF(driver);
+	  loginPage.enterUsername("student");
+	  loginPage.enterPassword("Password123");
+	  loginPage.clickSubmit();
+	  
+	  String expectedUrl = "https://practicetestautomation.com/logged-in-successfully/";
+	  Assert.assertEquals(driver, expectedUrl);
+	  System.out.println("Login Test with Page Factory executed.");
+  }
+}

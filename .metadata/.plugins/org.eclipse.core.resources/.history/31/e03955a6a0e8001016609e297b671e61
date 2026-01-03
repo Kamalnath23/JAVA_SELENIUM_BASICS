@@ -1,0 +1,40 @@
+package Kamal.JavaSeleniumBasics.PageFactory.Utility;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Utility {
+	private static WebDriver driver;
+  @Test
+  public static WebDriver openBrowser(String browserType, String url) {
+	  if (browserType.equalsIgnoreCase("edge")) {
+		  WebDriverManager.edgedriver().setup();
+		  EdgeOptions options = new EdgeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+			driver = new EdgeDriver(options);
+	  }else if (browserType.equalsIgnoreCase("chrome")) {
+		  WebDriverManager.chromedriver().setup();
+		  // Add ChromeOptions if needed
+		  ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  //options.addArguments("start-maximized");
+		  options.addArguments("--disable-gpu");
+		  options.addArguments("--no-sandbox");
+		  options.addArguments("--disable-dev-shm-usage");
+		  driver = new ChromeDriver(options);
+		  // For simplicity, using default ChromeDriver without options here
+		  driver = new EdgeDriver(); // Replace with ChromeDriver() when using Chrome
+	  driver.manage().window().maximize(); // Maximize the browser window
+	  driver.get(url); // Open Bing website
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	  return driver;
+  }
+}

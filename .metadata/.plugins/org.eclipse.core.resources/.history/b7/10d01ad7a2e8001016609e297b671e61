@@ -1,0 +1,11 @@
+package Kamal.JavaSeleniumBasics.NoPageFactory;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class ValidateLoginTestWithoutPageFactory {
+WebDriver driver;
+  @Test
+  public void f() {
+  }
+}
