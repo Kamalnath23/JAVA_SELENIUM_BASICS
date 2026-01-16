@@ -1,9 +1,0 @@
-package Kamal.JavaSeleniumBasics.PageFactory.Utility;
-
-import org.testng.annotations.Test;
-
-public class Utility {
-  @Test
-  public void f() {
-  }
-}

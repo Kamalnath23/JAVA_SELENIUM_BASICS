@@ -1,7 +1,0 @@
-package Kamal.JavaSeleniumBasics.PageFactory.Pages;
-
-
-public class LoginPagePF {
-	WebDriver driver;
-	
-}

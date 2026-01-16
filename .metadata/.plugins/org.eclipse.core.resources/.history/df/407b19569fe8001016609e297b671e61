@@ -1,8 +1,0 @@
-package Kamal.JavaSeleniumBasics.PageFactory.Pages;
-
-import org.openqa.selenium.WebDriver;
-
-public class LoginPagePF {
-	WebDriver driver;
-	
-}
